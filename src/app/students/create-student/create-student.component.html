@@ -1,0 +1,41 @@
+<mat-card>
+  <form (submit)="onCreateStudent(userForm)" #userForm="ngForm">
+    <mat-form-field>
+      <input
+        matInput
+        name="name"
+        type="text"
+        ngModel
+        required
+        placeholder="Full Name"
+        #name="ngModel"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <input
+        matInput
+        name="id"
+        type="text"
+        ngModel
+        required
+        placeholder="Student's ID"
+        #id="ngModel"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <input
+        matInput
+        name="grade"
+        type="number"
+        ngModel
+        required
+        placeholder="Grade(0~100)"
+        #grade="ngModel"
+      />
+    </mat-form-field>
+    <br />
+    <button mat-raised-button color="accent" type="submit">Add Student</button>
+  </form>
+</mat-card>

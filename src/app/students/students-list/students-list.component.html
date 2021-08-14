@@ -1,0 +1,9 @@
+<mat-accordion multi="true">
+  <mat-expansion-panel *ngFor="let student of students">
+    <mat-expansion-panel-header>
+      {{ student.name }}
+    </mat-expansion-panel-header>
+    <p>{{ student.ID }}</p>
+    <p>{{ student.grade }}</p>
+  </mat-expansion-panel>
+</mat-accordion>
