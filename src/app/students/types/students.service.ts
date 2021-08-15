@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Student } from './student.model';
 
 @Injectable({ providedIn: 'root' })
 export class StudentsService {
   private students: Student[] = [];
-  private studentsUpdated = new Subject<Student[]>();
+  private studentsUpdated;
 
-  getStudents() {
+  getStudents(): Student[] {
     //Gets the objects
-    return [...this.students]  }
-  getStudentsUpdateListener() {
-    //Listens to the event
+    return [...this.students];
+  }
+  getStudentsUpdateListener(): Observable<Student[]> {
+    //Listens to the event, the Subject
     return this.studentsUpdated.asObservable();
   }
   addStudent(name: string, id: string, grade: number) {
