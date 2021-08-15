@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Student } from '../student.model';
-import { StudentsService } from '../students.service';
+import { Student } from '../types/student.model';
+import { StudentsService } from '../types/students.service';
 import { Subscription } from 'rxjs';
 
 @Component({

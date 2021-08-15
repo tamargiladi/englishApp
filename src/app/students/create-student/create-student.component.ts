@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { StudentsService } from '../students.service';
+import { StudentsService } from '../types/students.service';
 
 /*
 1. Services don't need to be imported in app.module.ts
@@ -11,9 +11,9 @@ import { StudentsService } from '../students.service';
   templateUrl: './create-student.component.html',
 })
 export class CreateStudentComponent {
-  private enteredName = '';
-  private enteredID = '';
-  private enteredGrade = 0;
+  // private enteredName = '';
+  // private enteredID = '';
+  // private enteredGrade = 0;
 
   //TODO: What is this?
   constructor(public studentsService: StudentsService) {}

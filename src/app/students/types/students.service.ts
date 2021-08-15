@@ -9,8 +9,7 @@ export class StudentsService {
 
   getStudents() {
     //Gets the objects
-    return [...this.students];
-  }
+    return [...this.students]  }
   getStudentsUpdateListener() {
     //Listens to the event
     return this.studentsUpdated.asObservable();
